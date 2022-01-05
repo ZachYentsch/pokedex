@@ -3,8 +3,8 @@ import { isValidProp } from "./Utils/isValidProp.js"
 
 class AppState extends EventEmitter {
   /** @type {import('./Models/Pokemon').Pokemon[]} */
-  activePokemon = null
-  apiPokemon = []
+  activePoke = null
+  apiPokes = []
   /** @type {import('./Models/Pokemon').Pokemon[]} */
   myPokemon = []
 }

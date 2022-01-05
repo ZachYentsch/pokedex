@@ -24,24 +24,37 @@
       </a>
     </nav>
   </header>
-  <main>
+  <main class="bg-dark">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-12">
-          <div id="app"></div>
+        <div class="col-3">
+          <h2 class="text-white">Pokedex</h2>
+          <ul id="api-pokes">
+            <!--ANCHOR <li class="selectable text-white">NAME</li> -->
+          </ul>
+        </div>
+        <div class="col-9" id="active-poke">
+          <!--ANCHOR Injection <div class="bg-primary">
+            <h1 class="text-center text-white">NAME</h1>
+            <h4 class="text-center text-white">HEIGHT | WEIGHT | TYPES</h4>
+            <img src="" alt=""> -->
+          <!-- </div> -->
         </div>
       </div>
     </div>
   </main>
   <footer class="bg-dark text-light">
     <div class="text-center no-select">
-      <p><small>Made with 💖 by Codeworks</small></p>
+      <p><small>PoKeMaNs</small></p>
     </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
     crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"
+    integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="app/main.js" type="module"></script>
 </body>
 
