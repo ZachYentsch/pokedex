@@ -5,12 +5,12 @@ import { apiPokesService } from "../Services/ApiPokesService.js";
 function _drawAllPokes() {
     const apiPokes = ProxyState.apiPokes
     let template = ''
-    apiPokes.forEach(p => template += `<li class="selectable p-1 text-white" onclick="app.apiPokesController.getActivePokes('${p.id}')">${this.id}</li>`);
+    apiPokes.forEach(p => template += `<li class="selectable p-1 text-white" onclick="app.apiPokesController.getActivePoke('${p.name}')">${p.name}</li>`);
     document.getElementById('api-pokes').innerHTML = template
 }
 
 function _drawActivePokes() {
-    const poke = ProxyState.activePokemon
+    const poke = ProxyState.activePoke
     if (!poke) {
         document.getElementById('active-poke').innerHTML = ''
         return
@@ -22,7 +22,7 @@ async function _getAllPokes() {
     try {
         await apiPokesService.getAllApiPokes()
     } catch (error) {
-        console.log('error.message')
+        console.error(error)
     }
 }
 

@@ -10,9 +10,10 @@ class ApiPokesService {
     }
 
     async getActivePokes(pokesName) {
+        console.log(pokesName)
         const res = await pkmApi.get(pokesName)
         console.log(res.data)
-        ProxyState.activePokemon = new Pokemon(res.data)
+        ProxyState.activePoke = new Pokemon(res.data)
     }
 }
 
